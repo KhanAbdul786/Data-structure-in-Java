@@ -25,23 +25,23 @@ public class UniqueChar {
 		 * is passed as function argument. Return output and don't print it. Taking
 		 * input and printing output is handled automatically.
 		 */
-		if (str.length() == 0) {
+		if(str.length()==0) {
 			return "";
 		}
-		String ans = "";
-		HashMap<Character, Boolean> hm = new HashMap<Character, Boolean>();
-		for (int currIndex = 0; currIndex < str.length(); currIndex++) {
-			char currChar = str.charAt(currIndex);
-			if (!hm.containsKey(currChar)) {
-				hm.put(currChar, true);
-				ans += currChar;
+		String ans="";
+		HashMap<Character, Boolean> hs=new HashMap<Character, Boolean>();
+		for (int i = 0; i < str.length(); i++) {
+			if(!hs.containsKey(str.charAt(i))) {
+				hs.put(str.charAt(i), true);
+				ans=ans+str.charAt(i);
 			}
 		}
 		return ans;
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String str="ababacd";
+		System.out.println(uniqueChar(str));
 
 	}
 
